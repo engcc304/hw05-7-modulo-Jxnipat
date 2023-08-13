@@ -21,3 +21,22 @@
         February has 29 days
 
 */
+
+#include <stdio.h>
+
+int main() {
+    int year;
+
+    // รับปีค.ศ. จากผู้ใช้
+    printf("Year(s): ");
+    scanf("%d", &year);
+
+    // เงื่อนไขในการตรวจสอบปีอธิกสุรทิน
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+        printf("February has 29 days\n");
+    } else {
+        printf("February has 28 days\n");
+    }
+
+    return 0;
+}
